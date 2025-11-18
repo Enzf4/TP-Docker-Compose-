@@ -5,6 +5,6 @@ Enzo Farias - 231693
 Luan dos Santos Correia - 228391
 
 ## Prints
-/printHTML.png
+./printHTML.png
 
-/printPY.png
+./printPY.png
