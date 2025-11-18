@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  nginx-site:
+    build: ./nginx
+    container_name: nginx-static-site
+    ports:
+      - "8082:80"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  flask-app:
+    build: ./app
+    container_name: simple-flask-app
+    ports:
+      - "8081:5000"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
